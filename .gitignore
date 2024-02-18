@@ -3,4 +3,6 @@
 data/
 */__pycache__/
 *.pyc
+.ipynb_checkpoints
+# exclude the source data file
 trades.csv
