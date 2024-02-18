@@ -3,10 +3,16 @@ services:
   jupyter:
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./Dockerfile.j
     volumes:
       - ./work:/home/jovyan/work
     ports:
       - 8888:8888
     container_name: jupyter_notebook
     command: "start-notebook.sh --NotebookApp.token="
+  sp-psql:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 5432:5432
