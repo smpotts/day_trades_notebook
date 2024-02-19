@@ -1,4 +1,4 @@
-# jupyter
+# jupyter notebook setup
 FROM jupyter/minimal-notebook
 
 COPY ./requirements.txt /tmp/requirements.txt
