@@ -13,11 +13,11 @@ These source data are loaded into a table called `public.trades` on Postgres ins
 The Jupyter notebook analyzes the trading data and looks for the number of day-trades the occurred per account within a given time period. The program outputs a file with day trades in the `/work` directory.
 
 ## How to run
-#### Starting Docker
+### Starting Docker
 The program runs on Docker and can be started with a `docker compose up -d --build` command.
 There are two containers: one for the Postgresql instance and another for Jupyter Notebooks, verify they are running with a `docker ps` command.
 
-#### Starting Jupyter Notebooks 
+### Starting Jupyter Notebooks 
 Once both containers are up, and they are healthy, open a browser and go to 'http://localhost:8888/'. This will launch the Jupyter notebook which contains the trading analysis. 
 
 Navigate inside the `work/` directory and open the `trades_notebook.ipynb` file. Run each block of code within the notebook. The final statement contains a method call where you can input a `start_time` and an `end_time` for the date range to analyze day trades by account. Running the `day_trades()` method will create a `.csv` file with the count of day trades per account over the given time window. 
