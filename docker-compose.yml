@@ -10,6 +10,10 @@ services:
       - 8888:8888
     container_name: jupyter_notebook
     command: "start-notebook.sh --NotebookApp.token="
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
   sp-psql:
     build:
       context: .
