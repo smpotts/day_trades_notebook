@@ -20,4 +20,4 @@ There are two containers: one for the Postgresql instance and another for Jupyte
 ### Starting Jupyter Notebooks 
 Once both containers are up, and they are healthy, open a browser and go to 'http://localhost:8888/'. This will launch the Jupyter notebook which contains the trading analysis. 
 
-Navigate inside the `work/` directory and open the `trades_notebook.ipynb` file. Run each block of code within the notebook. The final statement contains a method call where you can input a `start_time` and an `end_time` for the date range to analyze day trades by account. Running the `day_trades()` method will create a `.csv` file with the count of day trades per account over the given time window. 
+Navigate inside the `work/` directory and open the `trades_notebook.ipynb` file. Run each block of code within the notebook. The final statement contains a method call where you can input a `start_time` and an `end_time` for the date range to analyze day trades by account. Running the final code block will run the `find_day_trades()` and the `write_output_file()` method will create a `.csv` file with the count of day trades per account over the given time window. 
